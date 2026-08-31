@@ -1,0 +1,16 @@
+pandas
+plotly
+tqdm
+pydantic
+gradio
+langchain
+langchain-core
+langchain-openai
+sentence-transformers
+transformers
+torch
+accelerate
+bitsandbytes
+chromadb
+python-dotenv
+

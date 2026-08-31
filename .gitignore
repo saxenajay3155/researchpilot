@@ -1,0 +1,31 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environment
+.venv/
+.venv-marker
+
+# Python cache
+__pycache__/
+_pycache_/
+*.pyc
+*.pyo
+
+# Local editor/tool files
+.vscode/
+.gradio/
+    
+# Notebook files
+.ipynb_checkpoints/
+
+# Local vector database
+vector_db_qwen_750/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

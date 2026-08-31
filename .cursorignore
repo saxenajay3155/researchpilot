@@ -1,0 +1,3 @@
+# Never expose environment secrets to Cursor
+.env
+.env.*
