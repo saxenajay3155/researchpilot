@@ -2,7 +2,7 @@ pandas
 plotly
 tqdm
 pydantic
-gradio
+gradio>=6,<7
 langchain
 langchain-core
 langchain-openai
