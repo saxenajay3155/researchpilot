@@ -47,4 +47,5 @@ with  gr.Blocks() as demo:
 
         submit_button.click(fn=respond, inputs=[question_box, chatbot], outputs=[chatbot, evidence_box ,question_box])
         question_box.submit(fn=respond, inputs=[question_box, chatbot], outputs=[chatbot, evidence_box ,question_box])
-demo.launch(share=True)
+if __name__ == "__main__":
+    demo.launch()
