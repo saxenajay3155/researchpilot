@@ -49,7 +49,7 @@ reranker_model = CrossEncoder(
     device=RERANKER_DEVICE,
     model_kwargs={"torch_dtype": torch.float16}
 )
-
+#===========================================================================================
 def reranker(question, documents):
   contexts = documents["documents"][0]
   pairs = [(question, context) for context in contexts]
@@ -200,13 +200,13 @@ def question_answer(question):
     Source: {metadata.get("source", "Unknown")}
     
     {context}"""
-        for i, (context, metadata) in enumerate(
-            zip(
-                reranked_contexts,
-                reranked_metadatas
-            ),
-            start=1
-        )
+    for i, (context, metadata) in enumerate(
+        zip(
+            reranked_contexts,
+            reranked_metadatas
+        ),
+        start=1
+    )
     )
     
     system_message = SYSTEM_PROMPT.format(context=reranked_contexts_string)
@@ -222,6 +222,7 @@ def question_answer(question):
     
         if tool_round > MAX_TOOL_ROUNDS:
             break
+        
         messages.append(response)
 
         for tool_call in response.tool_calls:
